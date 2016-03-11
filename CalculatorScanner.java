@@ -48,7 +48,7 @@ public class CalculatorScanner {
         case '/': System.out.println(stack.divide());
                   break;
         default:  System.out.println("No match");
-          }  
+      }  
     }
     catch(java.util.EmptyStackException e) {
       System.out.println("Invalid expression.");
@@ -59,6 +59,7 @@ public class CalculatorScanner {
       System.exit(1);
     }  
   }
+
   private String getToken(){
     return reader.next();
   }

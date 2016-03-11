@@ -5,8 +5,8 @@ import org.junit.Test;
 
 public class ValidationsTest {
 
-//isNumber method
-@Test
+  //isNumber method
+  @Test
   public void testIsNumberZero(){
     Validations v = new Validations();
     assertTrue("0 is a number", v.isNumber("0") == true);
