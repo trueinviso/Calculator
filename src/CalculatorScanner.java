@@ -2,7 +2,6 @@ package src;
 
 import java.util.Scanner;
 
-
 public class CalculatorScanner {
   Scanner reader;
   String n;

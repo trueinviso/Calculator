@@ -1,6 +1,5 @@
 import src.CalculatorScanner;
 
-
 public class CalculatorLauncher {
   public static void main(String[] args) { 
     CalculatorScanner scanner = new CalculatorScanner();
