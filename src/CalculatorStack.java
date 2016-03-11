@@ -1,6 +1,8 @@
+package src;
+
 import java.util.Stack;
 
-class CalculatorStack {
+public class CalculatorStack {
   private Stack<Float> numbers;
   float firstNum, secondNum;
 
@@ -8,7 +10,7 @@ class CalculatorStack {
     this.numbers = new Stack<Float>();    
   }
   
-  protected void pushNumber(float n) {
+  public void pushNumber(float n) {
     this.numbers.push(n);
   }   
 
@@ -17,21 +19,21 @@ class CalculatorStack {
     this.firstNum = numbers.pop();    
   }
 
-  protected float add() {
+  public float add() {
     popNumbers();
     float result = this.firstNum + this.secondNum;
     this.numbers.push(result);
     return result;
   }
 
-  protected float multiply() {
+  public float multiply() {
     popNumbers();
     float result = this.firstNum * this.secondNum;
     this.numbers.push(result);
     return result;
   }
 
-  protected float subtract() {
+  public float subtract() {
     popNumbers();
     float result = this.firstNum - this.secondNum;
     this.numbers.push(result);
@@ -39,7 +41,7 @@ class CalculatorStack {
   }
 
   //need to check for divide by 0
-  protected float divide() {
+  public float divide() {
     popNumbers();
     if(this.secondNum == 0)
       throw new IllegalArgumentException("Divide by 0");
