@@ -3,10 +3,10 @@ package src;
 import java.util.Scanner;
 
 public class CalculatorScanner {
-  Scanner reader;
-  String n;
-  CalculatorStack stack;
-  Validations validate;
+  private Scanner reader;
+  private String token;
+  private CalculatorStack stack;
+  private Validations validate;
 
   public CalculatorScanner(){
     this.reader = new Scanner(System.in);
@@ -16,22 +16,22 @@ public class CalculatorScanner {
 
   public void run(){
     System.out.print("> ");
-    this.n = getToken();
-    System.out.println(n);
+    this.token = getToken();
+    System.out.println(token);
 
-    while(!validate.quit(n)) {
-      if (validate.isNumber(n)) {
-        stack.pushNumber(Float.parseFloat(n));
+    while(!validate.quit(token)) {
+      if (validate.isNumber(token)) {
+        stack.pushNumber(Float.parseFloat(token));
       }
-      else if(validate.isValidSymbol(n)) {
-        computeValue(n.charAt(0));
+      else if(validate.isValidSymbol(token)) {
+        computeValue(token.charAt(0));
       }
       else {
         System.out.println("Invalid Input");
       }
       System.out.print("> ");
-      n = getToken();
-      System.out.println(n);
+      token = getToken();
+      System.out.println(token);
     }
   }
 
