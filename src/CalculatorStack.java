@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class CalculatorStack {
   private Stack<Float> numbers;
-  float firstNum, secondNum;
+  private float firstNum, secondNum;
 
   public CalculatorStack() {
     this.numbers = new Stack<Float>();    
