@@ -17,6 +17,7 @@ public class CalculatorScanner {
   public void run(){
     System.out.print("> ");
     this.n = getToken();
+    System.out.println(n);
 
     while(!validate.quit(n)) {
       if (validate.isNumber(n)) {
@@ -30,6 +31,7 @@ public class CalculatorScanner {
       }
       System.out.print("> ");
       n = getToken();
+      System.out.println(n);
     }
   }
 
@@ -52,16 +54,23 @@ public class CalculatorScanner {
       }  
     }
     catch(java.util.EmptyStackException e) {
-      System.out.println("Invalid expression.");
+      System.err.println("Invalid expression.");
       System.exit(1);
     }  
     catch(java.lang.IllegalArgumentException e) {
-      System.out.println("Cannot divide by 0");
+      System.err.println("Cannot divide by 0");
       System.exit(1);
     }  
   }
 
   private String getToken(){
-    return reader.next();
+    if(reader.hasNext()) {
+      return reader.next();
+    }
+    else {
+      System.out.println("EOF");
+      System.exit(1);
+    }
+    return "q";
   }
 }
