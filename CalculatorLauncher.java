@@ -7,3 +7,4 @@ public class CalculatorLauncher {
     scanner.exit();
   }
 }
+
