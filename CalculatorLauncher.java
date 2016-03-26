@@ -1,10 +1,13 @@
-import src.CalculatorScanner;
+import src.*;
 
 public class CalculatorLauncher {
   public static void main(String[] args) { 
+    CalculatorStack stack = new CalculatorStack();
+    Validations validate = new Validations();
     CalculatorScanner scanner = new CalculatorScanner();
-    scanner.run();
-    scanner.exit();
+    Run run = new Run(stack, validate, scanner);
+    run.run();
+    run.exit();
   }
 }
 
