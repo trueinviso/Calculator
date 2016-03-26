@@ -7,7 +7,6 @@ public class CalculatorLauncher {
     CalculatorScanner scanner = new CalculatorScanner();
     Run run = new Run(stack, validate, scanner);
     run.run();
-    run.exit();
   }
 }
 
