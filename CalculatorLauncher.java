@@ -5,7 +5,7 @@ public class CalculatorLauncher {
     CalculatorStack stack = new CalculatorStack();
     Validations validate = new Validations();
     CalculatorScanner scanner = new CalculatorScanner();
-    Run run = new Run(stack, validate, scanner);
+    RunCalculator run = new RunCalculator(stack, validate, scanner);
     run.run();
   }
 }
